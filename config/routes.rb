@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :books
 
+  scope :api do
+    scope :v1 do
+      resources :books, only: [:index], defaults: {format: :json}
+    end
+  end
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
