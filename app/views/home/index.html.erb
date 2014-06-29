@@ -4,3 +4,11 @@
   <input type="submit" value="Add">
 </form>
 {{ name }}
+
+<div ng-controller="BooksController">
+  <ul>
+    <li ng-repeat="book in books">
+      {{book.title}}, {{book.author}}
+    </li>
+  </ul>
+</div>
