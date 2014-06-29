@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   scope :api do
     scope :v1 do
-      resources :books, only: [:index], defaults: {format: :json}
+      resources :books, defaults: {format: :json}
     end
   end
   get 'home/index'

@@ -9,6 +9,8 @@
   <ul>
     <li ng-repeat="book in books">
       {{book.title}}, {{book.author}}
+      <a href="" ng-click="deleteBook(book.id, $index)">delete</a>
     </li>
   </ul>
 </div>
+
